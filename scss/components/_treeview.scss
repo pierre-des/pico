@@ -1,0 +1,119 @@
+/**
+ * Treeview (<nav role="tree">)
+*/
+
+aside nav {
+  &[role="tree"] {
+    user-select: none;
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+    }
+
+    input + label + ul {
+      margin: 0 0 0 1rem;
+    }
+
+    input ~ ul {
+      display: none;
+    }
+
+    input:checked ~ ul {
+      display: block;
+    }
+
+    label,
+    label::before {
+      margin:0;
+      background: var(--icon-treeview-xs) no-repeat;
+      cursor: pointer;
+      @if $enable-responsive-typography {
+        @if map-get($breakpoints, "sm") {
+          @media (min-width: map-get($breakpoints, "sm")) {
+            background: var(--icon-treeview-sm) no-repeat;
+          }
+        }
+        @if map-get($breakpoints, "md") {
+          @media (min-width: map-get($breakpoints, "md")) {
+            background: var(--icon-treeview-md) no-repeat;
+          }
+        }
+        @if map-get($breakpoints, "lg") {
+          @media (min-width: map-get($breakpoints, "lg")) {
+            background: var(--icon-treeview-lg) no-repeat;
+          }
+        }
+        @if map-get($breakpoints, "xl") {
+          @media (min-width: map-get($breakpoints, "xl")) {
+            background: var(--icon-treeview-xl) no-repeat;
+          }
+        }
+      }
+    }
+
+    a,
+    a::before {
+      display: block;
+      margin: 0 1.5rem;
+      padding: 0;
+    }
+
+    label,
+    a,
+    label::before {
+      display: inline-block;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      vertical-align: middle;
+    }
+
+    label {
+      background-position: 1.5rem 0;
+    }
+    a {
+      background-position: 0.75rem 0;
+    }
+
+    label::before {
+      width: 1.5rem;
+      margin: 0 1.75rem 0 0;
+      background-position: 0 -3rem;
+      content: "";
+    }
+
+    a::before {
+      width: 1.5rem;
+      margin: 0 3rem 0 0;
+      background-position: 0 -3rem;
+      content: "";
+      vertical-align: middle;
+    }
+
+    input:checked + label::before {
+      background-position: 0 -1.5rem;
+    }
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  nav {
+    &[role="tree"] {
+      -webkit-animation: webkit-adjacent-element-selector-bugfix infinite 1s;
+
+      @-webkit-keyframes webkit-adjacent-element-selector-bugfix {
+        from {
+          padding: 0;
+        }
+        to {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

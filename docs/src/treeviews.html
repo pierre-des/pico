@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  ${require('./_head.html')
+  title="Treeviews"
+  description="The essential treeview component in semantic HTML, responsive without any JavaScript."
+  canonical="treeviews.html"
+  }
+</head>
+
+<body>
+  ${require('./_nav.html')}
+
+  <main class="container" id="docs">
+    ${require('./_sidebar.html') active="treeviews-link"}
+
+    <div role="document">
+      <section id="treeviews">
+        <hgroup>
+          <h1>Treeviews</h1>
+          <h2>The essential treeview component in pure semantic HTML fully responsive without javascript.</h2>
+        </hgroup>
+        <article aria-label="Treeview example">
+          <aside>
+            <nav role="tree">
+              <ul>
+                <li>
+                  <input type="checkbox" id="group-1" />
+                  <label for="group-1">Group 1</label>
+                  <ul>
+                    <li><a href="#">Link 1.1</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <input type="checkbox" id="group-2" checked />
+                  <label for="group-2">Group 2</label>
+                  <ul>
+                    <li>
+                      <input type="checkbox" id="group-2-1" checked />
+                      <label for="group-2-1">Group 2.1</label>
+                      <ul>
+                        <li><a href="#">Link 2.1.1</a></li>
+                        <li><a href="#">Link 2.1.2</a></li>
+                        <li><a href="#">Link 2.1.3</a></li>
+                      </ul>
+                    </li>
+                      <li>
+                        <input type="checkbox" id="group-2-2" />
+                        <label for="group-2-2">Group 2.2</label>
+                        <ul>
+                          <li><a href="#">Link 2.2.1</a></li>
+                          <li><a href="#">Link 2.2.2</a></li>
+                        </ul>
+                      </li>
+                    <li><a href="#">Link</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+              </ul>
+            </nav>
+          </aside>
+          <footer class="code">
+            <pre><code>&lt;<b>nav</b> role=<u>"tree"</u>&gt;
+  &lt;<b>ul</b>&gt;
+    &lt;<b>li</b>&gt;
+      &lt;<b>input</b> type=<u>"checkbox"</u> <i>id</i>=<u>"group-1"</u> /&gt;
+      &lt;<b>label</b> <i>for</i>=<u>"group-1"</u>&gt;Group 1&lt;/<b>label</b>&gt;
+      &lt;<b>ul</b>&gt;
+        &lt;<b>li</b>&gt;&lt;a <i>href</i>=<u>"#"</u>&gt;Link 1.1&lt;/a&gt;&lt;/<b>li</b>&gt;
+      &lt;/<b>ul</b>&gt;
+    &lt;/<b>li</b>&gt;
+    &lt;<b>li</b>&gt;
+      &lt;<b>input</b> type=<u>"checkbox"</u> <i>id</i>=<u>"group-2"</u> <i>checked</i> /&gt;
+      &lt;<b>label</b> <i>for</i>=<u>"group-2"</u>&gt;Group 2&lt;/<b>label</b>&gt;
+      &lt;<b>ul</b>&gt;
+        &lt;<b>li</b>&gt;
+          &lt;<b>input</b> type=<u>"checkbox"</u> <i>id</i>=<u>"group-2-1"</u> <i>checked</i> /&gt;
+          &lt;<b>label</b> <i>for</i>=<u>"group-2-1"</u>&gt;Group 2.1&lt;/<b>label</b>&gt;
+          &lt;<b>ul</b>&gt;
+            &lt;<b>li</b>&gt;&lt;a <i>href</i>=<u>"#"</u>&gt;Link 2.1.1&lt;/a&gt;&lt;/<b>li</b>&gt;
+            &lt;<b>li</b>&gt;&lt;a <i>href</i>=<u>"#"</u>&gt;Link 2.1.2&lt;/a&gt;&lt;/<b>li</b>&gt;
+            &lt;<b>li</b>&gt;&lt;a <i>href</i>=<u>"#"</u>&gt;Link 2.1.3&lt;/a&gt;&lt;/<b>li</b>&gt;
+          &lt;/<b>ul</b>&gt;
+        &lt;/<b>li</b>&gt;
+          &lt;<b>li</b>&gt;
+            &lt;<b>input</b> type=<u>"checkbox"</u> <i>id</i>=<u>"group-2-2"</u> /&gt;
+            &lt;<b>label</b> <i>for</i>=<u>"group-2-2"</u>&gt;Group 2.2&lt;/<b>label</b>&gt;
+            &lt;<b>ul</b>&gt;
+              &lt;<b>li</b>&gt;&lt;a <i>href</i>=<u>"#"</u>&gt;Link 2.2.1&lt;/a&gt;&lt;/<b>li</b>&gt;
+              &lt;<b>li</b>&gt;&lt;a <i>href</i>=<u>"#"</u>&gt;Link 2.2.2&lt;/a&gt;&lt;/<b>li</b>&gt;
+            &lt;/<b>ul</b>&gt;
+          &lt;/<b>li</b>&gt;
+        &lt;<b>li</b>&gt;&lt;a <i>href</i>=<u>"#"</u>&gt;Link&lt;/a&gt;&lt;/<b>li</b>&gt;
+      &lt;/<b>ul</b>&gt;
+    &lt;/<b>li</b>&gt;
+    &lt;<b>li</b>&gt;&lt;a <i>href</i>=<u>"#"</u>&gt;Link&lt;/a&gt;&lt;/<b>li</b>&gt;
+    &lt;<b>li</b>&gt;&lt;a <i>href</i>=<u>"#"</u>&gt;Link&lt;/a&gt;&lt;/<b>li</b>&gt;
+  &lt;/<b>ul</b>&gt;
+&lt;/<b>nav</b>&gt;</code></pre>
+          </footer>
+
+        </article>
+        <p><code>&lt;<b>nav</b>&gt;</code> must be in a <code>&lt;<b>aside</b>&gt;</code> attribute</p>
+        <p><code>&lt;<b>nav</b>&gt;</code> must have a <code><b>role</b>=<u>"tree"</u></code> attribute</p>
+        <p>Use <code>&lt;<b>ul</b>&gt;</code> for folders.</p>
+        <p>Use <code>&lt;<b>input</b> <i>checked</i></code> for open folder, when omitted it will be
+          closed.</p>
+      </section>
+
+      ${require('./_footer.html')}
+
+    </div>
+  </main>
+  <script src="js/commons.min.js"></script>
+</body>
+
+</html>
